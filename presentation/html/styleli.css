@@ -1,0 +1,118 @@
+/* Body avec un arrière-plan joyeux */
+body {
+    background-color: #ebebebee; /* Couleur de fond claire */
+    background-image: url('chemin/vers/votre/image.jpg'); /* Image de fond si nécessaire */
+    background-size: cover; /* Ajustement de la taille de l'image */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-position: center center; /* Positionnement centré de l'image */
+    padding-top: 50px; /* Espacement du haut pour la barre de navigation */
+    font-family: Arial, sans-serif; /* Police générique */
+    min-height: 100vh; /* Hauteur minimale de la fenêtre visible */
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Contenu principal */
+  .main-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 90%; /* Largeur maximale */
+    max-width: 1200px; /* Largeur maximale */
+  }
+  
+  /* Styles pour la table */
+  .table {
+    width: 100%; /* La table s'adapte à la largeur de l'écran */
+    margin-bottom: 20px; /* Espacement en bas de la table */
+    border-collapse: collapse; /* Fusion des bordures de tableau */
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    border: 1px solid #ccc; /* Bordure légère */
+  }
+  
+  /* Styles pour les boutons */
+  .btn-primary,
+  .btn-danger {
+    margin-right: 5px; /* Espacement entre les boutons */
+  }
+  
+  /* Styles pour la barre de recherche */
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px; /* Espacement sous la barre de recherche */
+  }
+  
+  .input-group-prepend {
+    width: 40px; /* Largeur du conteneur de l'icône */
+    padding: 0;
+  }
+  
+  .input-group-prepend .input-group-text {
+    background-color: #6dbdff; /* Fond bleu vif pour l'icône */
+    border: none; /* Supprimer la bordure */
+    width: 100%; /* Taille maximale pour l'icône */
+    display: flex; /* Utilisation de flexbox pour aligner le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    border-radius: 5px 0 0 5px; /* Coins arrondis à gauche */
+  }
+  
+  .input-group-prepend .input-group-text i {
+    color: white; /* Couleur de l'icône */
+    font-size: 1.2rem; /* Taille de l'icône */
+  }
+  
+  @media (max-width: 768px) {
+    /* Styles pour les écrans mobiles */
+    .main-content {
+      padding: 10px; /* Espacement réduit pour les petits écrans */
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.9rem; /* Réduire la taille du texte pour les petits écrans */
+      padding: 5px; /* Réduire l'espacement interne pour les petits écrans */
+    }
+  
+    .btn-primary,
+    .btn-danger {
+      font-size: 0.8rem; /* Réduire la taille du texte des boutons pour les petits écrans */
+      padding: 5px 10px; /* Réduire le padding des boutons pour les petits écrans */
+    }
+  
+    .input-group-prepend .input-group-text i {
+      font-size: 1rem; /* Réduire la taille de l'icône pour les petits écrans */
+    }
+  }
+
+
+
+  .inputHide {
+    display: none;
+}
+#chart_title {
+    margin: 20px 0;
+}
+.top_titles, .row.table_cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.column {
+    padding: 5px;
+}
+.edit_panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.edit_panel a, .edit_panel span {
+    cursor: pointer;
+}

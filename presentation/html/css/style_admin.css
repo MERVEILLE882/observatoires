@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: url('images/acc4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.navbar {
+  padding: 1rem;
+  height: 70px !important;
+}
+.logo img {
+  height: 76px;
+  width: 90px;
+}
+.login_text {
+  color: #3a57af; /* Couleur du lien de connexion */
+  text-decoration: none; 
+  margin-left: auto;
+  margin-right: 20px;
+  font-weight: bold;
+}
+#sidebarCollapse{
+  margin-left:60px;
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  overflow-y: auto;
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+.sidebar.hidden-left {
+transform: translateX(-100%);
+}
+
+.sidebar .capture {
+  margin: 80px 0 10px;
+  font-size: 60px;
+  text-align: center;
+}
+.sidebar .user-info {
+  text-align: center;
+}
+.sidebar-search {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+.sidebar nav ul li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.sidebar nav ul li  a #gestion{
+      margin-left:10px;
+    }
+.sidebar nav ul li a:hover {
+  color: #007bff;
+}
+.sidebar nav ul li ul {
+  display: none;
+  margin-left: 20px;
+}
+.sidebar nav ul li:hover > ul {
+  display: block;
+}
+
+.main-content {
+margin-left: 220px;
+padding: 100px 20px 20px 20px; /* padding-top ajusté pour la barre de navigation */
+flex-grow: 1;
+background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main-content.full-width-content {
+margin-right: 0;
+width: 100%;
+}
+.main-content .card {
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin-bottom: 20px;
+}
+.main-content .card p{
+text-align:center;
+}
+
+.image-block {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.image-block .image-card {
+flex: 1 1 calc(33.333% - 20px);
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
+.image-block .image-card img {
+width: 100%;
+height: auto;
+}
+
+@media (max-width: 576px) {
+  .image-block .image-card {
+    flex: 1 1 100%;
+  }
+
+/* cacher le sidebar vers la droite des petits ecrans */
+/* Styles existants */
+.main-content.full-width-content {
+margin-right: 0;
+width: 100%;
+}
+}
+
+@media (max-width: 768px) {
+.main-content {
+    margin-left: 0;
+}
+.image-block .image-card {
+    flex: 1 1 calc(50% - 20px);
+}
+}
+@media (max-width: 576px) {
+.image-block .image-card {
+    flex: 1 1 100%;
+}
+}
+
+/* Styles pour déplacer le contenu principal */
+.main-content.move-up {
+  margin-top: 60px; /* Ajustez cette valeur selon la hauteur de votre navbar */
+  transition: margin-top 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .logo img {
+    max-width: 100px;
+  }
+  #sidebarToggle {
+    max-width: 250px;
+    margin-left: 50px;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+  }
+  .sidebar nav ul li a {
+    padding: 10px;
+    width: 100%;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .image-block .image-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+   .main-content.move-up {
+    margin-top: 0;
+  }
+}

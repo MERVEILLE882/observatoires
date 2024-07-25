@@ -1,0 +1,204 @@
+/* styles.css */
+body {
+  /* background-image: url('../images/forum.jpg');   */
+  font-family: Arial, sans-serif;
+  /* background-color: #9494a3;  */
+  background-color: #494986;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 100px; /* Ajouté pour espacer le titre du haut de la page */
+}
+
+form {
+  width: 80%;
+  max-width: 600px; /* Limite la largeur maximale du formulaire */
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 60px; /* Reduced height */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #3a57af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #7b97ea;
+}
+
+#messages {
+  width: 80%;
+  max-width: 600px; /* Limite la largeur maximale des messages */
+  margin: 20px auto;
+}
+
+.message {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.message p {
+  margin: 5px 0;
+}
+
+.message strong {
+  color: gray;
+  font-weight: bold;
+}
+
+.message strong.admin {
+  color: #8BC34A;
+}
+
+.reply-form {
+  display: none; /* Hide reply form by default */
+  margin-top: 10px;
+  margin-left: 20px; /* Indentation for replies */
+}
+
+.reply-button {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  margin-left: 20px; /* Align with indentation */
+}
+
+.replies {
+  margin-left: 20px; /* Indentation for replies */
+  display: none; /* Hide replies by default */
+}
+
+.replies.show {
+  display: block; /* Show replies when .show is added */
+}
+
+/* Navbar styles */
+.navbar {
+  padding: 1rem; /* Ajustez l'espacement interne */
+}
+
+.logo img {
+  height: 110px;
+  width: 130px;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 20px; /* Espacement entre les liens du menu */
+  font-weight: bold;
+}
+
+.login_text {
+  color: #3a57af; /* Couleur du lien de connexion */
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 60px; /* Adjusted to reduce top margin on smaller screens */
+  }
+
+  form,
+  #messages {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .message {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .reply-form,
+  .reply-button {
+    margin-left: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Aligner les liens du menu verticalement */
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 0; /* Supprimer la marge */
+    margin-bottom: 1rem; /* Ajouter une marge inférieure */
+  }
+
+  .login_text {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    height: 60px; /* Réduire la hauteur du logo */
+    width: 100px;
+  }
+
+  .reply-button {
+    margin-left: 5px;
+  }
+
+  .replies {
+    margin-left: 5px;
+  }
+
+  .message strong {
+    font-size: 1.1em; /* Augmenter la taille de la police pour les petits écrans */
+  }
+
+  .message p {
+    font-size: 1em; /* Ajuster la taille de la police pour les petits écrans */
+  }
+}
+
+.observatoire_text {
+  font-size: 1.3rem; /* Augmenter la taille du texte */
+  margin-left: -500px; /* Ajouter un léger espace à gauche */
+  margin-right: 100px; /* Ajouter un espace à droite */
+  font-weight: bold;
+}
+.delete-button {
+  cursor: pointer;
+  color: #dc3545; /* Couleur rouge pour le bouton de suppression */
+  text-decoration: underline;
+  margin-left: 20px; /* Alignement avec l'indentation */
+}
+
+.delete-button:hover {
+  color: #ff5f5f; /* Couleur de survol du bouton de suppression */
+}

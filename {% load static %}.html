@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result-Search-Voyages</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href=" https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/agence.css' %}"> 
+</head>
+<body>
+
+  <button type="button" class="btn btn-sm btn-info transfer-message" data-bs-toggle="modal" data-bs-target="#transferMessageModal">
+    noter
+  </button>
+
+  <!---------------------- Modal noter---------------------------------------------------------------------------------------- -->
+  <div class="modal fade " id="transferMessageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="transferMessageModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content conf align-items-center  ">
+        <div class="">
+          <h2 class=" m-4 fw-bold question ">Aimez-vous notre agence ?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">                                          <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-light fs-4 ">Donnez-nous une note rapide pour que nous sachions si vous l'aimez.</p>
+          <div>
+              <span class="star" data-rating="1">★</span>
+              <span class="star" data-rating="2">★</span>
+              <span class="star" data-rating="3">★</span>
+              <span class="star" data-rating="4">★</span>
+              <span class="star" data-rating="5">★</span>
+          </div>
+          <h2 class="merci fw-bold"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+</body>
+<!-- <script src="{% static 'js/jquery.js"></script> -->
+<!-- <script src="{% static 'js/main.js" defer></script> -->
+<script src="{% static 'https://unpkg.com/aos@2.3.1/dist/aos.js' %}"></script>
+<script>
+    AOS.init();
+</script>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/Agence.js' %}"></script>
+<script>
+  $(document).ready(function(){
+    $('.star').click(function(){
+      var rating = $(this).data('rating');
+      // Ici, vous pouvez gérer la note sélectionnée (par exemple, l'envoyer au serveur)
+      //alert('Vous avez noté : ' + rating + ' étoiles');
+      $(this).addClass('rated'); // Ajoute la classe 'rated' à l'étoile cliquée
+      $(this).prevAll().addClass('rated'); // Ajoute la classe aux étoiles précédentes
+      $(this).nextAll().removeClass('rated'); // Supprime la classe des étoiles suivantes
+    });
+
+    $('.btn-close').click(function() {
+      $('.rating-container').hide(); // Ou utilisez une autre méthode pour fermer la modale
+    });
+  });
+</script>
+</html>
